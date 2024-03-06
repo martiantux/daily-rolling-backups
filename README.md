@@ -24,11 +24,27 @@ Before running the script, ensure you've set up the `config.ini` file with your 
 
 ## Usage
 
+### Testing / One-off run
+
 To run the backup script, use the following command in your command prompt or PowerShell, adjusting the path to where your script is located:
 
 ```cmd
 python path\to\your\script\daily_weekly_backups.py
 ```
+
+### Automating on Windows
+
+To set up automatic daily runs of the backup script, follow these brief steps:
+
+* Open Task Scheduler: Start > Windows Administrative Tools > Task Scheduler
+* Create a New Task: Action > Create Task
+* Name the task (e.g., "Project Backups")
+* Set the Trigger: Triggers tab > New
+* Set to Daily and choose your time
+* Set the Action: Actions tab > New
+* Program/script: path to your Python executable
+* Add arguments: path to the script
+* Save
 
 ## License and Credits
 
